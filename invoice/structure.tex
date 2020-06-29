@@ -99,6 +99,7 @@
 \newcommand{\sendercontactlinetwo}[1]{\renewcommand{\sendercontactlinetwo}{#1}}
 
 \newcommand{\termsandconditions}[1]{\renewcommand{\termsandconditions}{#1}}
+\newcommand{\thankyounote}[1]{\renewcommand{\thankyounote}{#1}}
 
 %------------------------------------------------
 
@@ -188,11 +189,10 @@
 \newcommand{\contactdetails}{
 	{
 		\footnotesize
-		\begin{tabular}{p{0.22\textwidth} p{0.22\textwidth} p{0.23\textwidth} p{0.22\textwidth}}
+%		\begin{tabular}{p{0.68\textwidth} p{0.22\textwidth}}
+		\begin{tabular}{>{\arraybackslash}m{0.625\textwidth} p{0.05\textwidth} R{0.25\textwidth}}
 			\arrayrulecolor{rulecolour}\toprule[0.5pt] % Horizontal line at the top of the table
-			\textbf{Sender} & & & \multirow{3}{0.22\textwidth}{\hfill{\color{highlightcolour}\Huge THANKS}}\\
-			\sendername & \senderaddresslineone & \sendercontactlineone & \\ 
-			\senderjob & \senderaddresslinetwo & \sendercontactlinetwo & \\
+			\thankyounote & & {\hfill{\color{highlightcolour}\Huge THANKS}}\\
 			\arrayrulecolor{rulecolour}\bottomrule[0.5pt] % Horizontal line at the bottom of the table
 		\end{tabular}
 	}
