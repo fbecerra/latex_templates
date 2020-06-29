@@ -6,5 +6,4 @@
 **/*.aux
 **/*.log
 **/*.synctex.gz
-invoice/*.pdf
-invoice/myinvoice.tex
+invoice/myinvoice.*
