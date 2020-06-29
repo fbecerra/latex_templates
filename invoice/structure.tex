@@ -80,6 +80,7 @@
 \newcommand{\payeejob}[1]{\renewcommand{\payeejob}{#1}}
 \newcommand{\payeeaddresslineone}[1]{\renewcommand{\payeeaddresslineone}{#1}}
 \newcommand{\payeeaddresslinetwo}[1]{\renewcommand{\payeeaddresslinetwo}{#1}}
+\newcommand{\payeeaddresslinethree}[1]{\renewcommand{\payeeaddresslinethree}{#1}}
 \newcommand{\payeecontactlineone}[1]{\renewcommand{\payeecontactlineone}{#1}}
 \newcommand{\payeecontactlinetwo}[1]{\renewcommand{\payeecontactlinetwo}{#1}}
 
@@ -93,6 +94,7 @@
 \newcommand{\senderjob}[1]{\renewcommand{\senderjob}{#1}}
 \newcommand{\senderaddresslineone}[1]{\renewcommand{\senderaddresslineone}{#1}}
 \newcommand{\senderaddresslinetwo}[1]{\renewcommand{\senderaddresslinetwo}{#1}}
+\newcommand{\senderaddresslinethree}[1]{\renewcommand{\senderaddresslinethree}{#1}}
 \newcommand{\sendercontactlineone}[1]{\renewcommand{\sendercontactlineone}{#1}}
 \newcommand{\sendercontactlinetwo}[1]{\renewcommand{\sendercontactlinetwo}{#1}}
 
@@ -121,11 +123,15 @@
 \newcommand{\invoicedtotable}{
 	{
 		\footnotesize
-		\begin{tabular}{p{0.25\textwidth} p{0.21\textwidth} p{0.21\textwidth} p{0.22\textwidth}}
+		\begin{tabular}{p{0.25\textwidth} p{0.37\textwidth} p{0.37\textwidth}}
 			\arrayrulecolor{rulecolour}\toprule[0.5pt] % Horizontal line at the top of the table
-			\multirow{3}{*}{{\color{highlightcolour} \Huge INVOICE}} & \textbf{Recipient} & \\
-			& \payeename & \payeeaddresslineone & \payeecontactlineone \\ 
-			& \payeejob & \payeeaddresslinetwo & \payeecontactlinetwo \\
+			\multirow{3}{*}{{\color{highlightcolour} \Huge INVOICE}} & \textbf{Recipient} & \textbf{Sender}\\
+			 & \payeename & \sendername \\ 
+			 & \payeeaddresslineone & \senderaddresslineone \\
+			 \multirow{3}{*}{{\color{highlightcolour} \Huge \#\invoiceref }} & \payeeaddresslinetwo & \senderaddresslinetwo \\
+			 & \payeeaddresslinethree & \senderaddresslinethree \\
+			 & \payeecontactlineone & \sendercontactlineone \\
+			 & \payeecontactlinetwo & \sendercontactlinetwo\\			
 			\arrayrulecolor{rulecolour}\bottomrule[0.5pt] % Horizontal line at the bottom of the table
 		\end{tabular}
 	}
