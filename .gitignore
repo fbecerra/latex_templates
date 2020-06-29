@@ -1,0 +1,8 @@
+# MacOSX stuff
+.DS_Store
+**/.DS_Store
+
+# Compiled files
+**/*.aux
+**/*.log
+**/*.synctex.gz
